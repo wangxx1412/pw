@@ -7,10 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   //property
+  length = 0;
   password = '';
   includeLetters = false;
   includeNumbers = false;
   includeSymbols = false;
+
+  onChangeLength(value: string) {
+    const parsedValue = parseInt(value);
+
+    //check if user typed a number
+    if (!isNaN(parsedValue)) {
+      this.length = parsedValue;
+    }
+  }
 
   onButtonClick() {
     this.password = 'My password';
