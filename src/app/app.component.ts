@@ -48,9 +48,6 @@ export class AppComponent {
     this.password = generatedPassword;
   }
 
-  // getPassword() {
-  //   return this.password;
-  // }
   onChangeUseLetters() {
     this.includeLetters = !this.includeLetters;
   }
